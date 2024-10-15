@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+class Histogram {
+public:
+    double bin[100];      // Space for up to 100 for bin
+    double freq[100];     // Space for up to 100 for frequency
+    int N=0;              // Initialize the value to 0
+    double b;             // Temp double to hold binary
+    double f;             // Temp double to hold frequency
+    int maxWordLength=0;  // Initialize the maximum word length to be 0 before iteration
+    int length2=0;        // Initialize the length of the word to be 0 before iteration
+
+    void readHistFile();             // Declaration of the function read histogram file
+
+    void readTextFile();             // Declaration of the function to read the text file
+
+    void printHistData();            // Declaration of the function to print the histogram data
+
+    void plotHorizontalHist();       // Declaration of the function to plot the horizontal histogram
+
+    void plotHorizontalHist_txt();   // Declaration of the function to plot the horizontal histogram using the data from the text file
+
+    void plotVerticalHist();         // Declaration of the function to plot the vertical histogram
+
+    void plotVerticalHist_txt();     // Declaration of the function to plot the vertical histogram using the data from the text file
+
+    void clearArray();               // Declaration of the function to clear the existing data stored
+};
